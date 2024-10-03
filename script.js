@@ -6,7 +6,8 @@ const caixaResultado = document.querySelector('.caixa-resultado');
 const perguntas = [
     {
         enunciado:"Você gosta da Ia (Inteligência artificial)?",
-        alternativas:["Sim", "Não"]
+        alternativas:[{
+            texto:"Sim", "Não"]
     },
     {
         enunciado:"Você acha que as Ia, representam alguma ameaça a comunidade?",
