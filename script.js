@@ -8,35 +8,35 @@ const perguntas = [//abre a lista de objetos (itens)
         enunciado: "Você gosta da Inteligência Artificial?",
         alternativas: [{
             texto: "Sim",
-            afirmação: "Porque sim"
+            afirmação: "Afirmação da alternativa 1"
         },
         {
             texto: "Não",
-            afirmação: "Porque não"
+            afirmação: "Afirmação da alternativa"
         }
         ]
     },
     {
-        enunciado: "O que você acha das IAs?",
+        enunciado: "Pergunta 2",
         alternativas: [{
-            texto: "Boas",
-            afirmação: "É top, uso pra colar nas prova"
+            texto: "Quem sabe...",
+            afirmação: "Afirmação da alternativa 1"
         },
         {
-            texto:"Ruins",
-            afirmação:"É ruim memo"
+            texto:"Talvez",
+            afirmação:"Afirmação da alternativa 2"
         }
         ]
     },
     {
-        enunciado: "Você usa as IAs com frequência?",
+        enunciado: "Pergunta 3",
         alternativas: [{
             texto: "Sim",
-            afirmação: "Uso direto"
+            afirmação: "Afirmação da alternativa 1"
         },
         {
             texto: "Não",
-            afirmação: "Quase nunca uso"
+            afirmação: "Afirmação da alternativa"
         }
         ]
     }
@@ -47,8 +47,13 @@ let respostas = "";
 
 
 function mostraPergunta() {
+    if (posicao>=perguntas.length){
+        mostraResultado();
+        return;
+    }
     perguntaAtual = perguntas[posicao];
     caixaPergunta.textContent = perguntaAtual.enunciado;
+    caixaAlternativa.textContent = " ";
     mostraAlternativas();
 }
 function mostraAlternativas() {
@@ -61,8 +66,13 @@ function mostraAlternativas() {
 }
 function respostasSelecionadas(opcaoSelecionada){
     const afirmacoes = opcaoSelecionada.afirmação;
-    respostas = afirmacoes;
+    respostas += afirmacoes + " ";
     posicao++;
     mostraPergunta();
+}
+function mostraResultado(){
+    caixaPergunta.textContent = "Confira suas respostas..";
+    textoResultado.textContent = respostas;
+    caixaAlternativa.textContent = ""
 }
 mostraPergunta();
