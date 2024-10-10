@@ -8,35 +8,35 @@ const perguntas = [//abre a lista de objetos (itens)
         enunciado: "Você gosta da Inteligência Artificial?",
         alternativas: [{
             texto: "Sim",
-            afirmação: "Afirmação da alternativa 1"
+            afirmação: "É top"
         },
         {
             texto: "Não",
-            afirmação: "Afirmação da alternativa"
+            afirmação: "Minha mãe não deixa eu usar"
         }
         ]
     },
     {
-        enunciado: "Pergunta 2",
-        alternativas: [{
-            texto: "Quem sabe...",
-            afirmação: "Afirmação da alternativa 1"
-        },
-        {
-            texto:"Talvez",
-            afirmação:"Afirmação da alternativa 2"
-        }
-        ]
-    },
-    {
-        enunciado: "Pergunta 3",
+        enunciado: "Você usa a Ia diariamente?",
         alternativas: [{
             texto: "Sim",
-            afirmação: "Afirmação da alternativa 1"
+            afirmação: "Colo nas prova com ela"
+        },
+        {
+            texto:"Não",
+            afirmação:"Eu estudo"
+        }
+        ]
+    },
+    {
+        enunciado: "A Ia vai dominar o mundo?",
+        alternativas: [{
+            texto: "Sim",
+            afirmação: "Obviamente"
         },
         {
             texto: "Não",
-            afirmação: "Afirmação da alternativa"
+            afirmação: "Não ne mongol"
         }
         ]
     }
